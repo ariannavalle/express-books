@@ -1,8 +1,14 @@
+<div id="nav"><a href="/"><img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="" width="40" height="40"></a></div>
+
 <div class="main">
     <h1>Submit a book</h1>
     <form action="/books/create" method="POST">
-        <label for="title-input">Title:</label><input id="title-input" type="text" name="title" />
+        <label for="title-input">Title:</label><input id="title-input" type="text" name="title" required />
         <label for="author-input">Author:</label><input id="author-input" type="text" name="author" />
+        <label for="description-input">Description:</label><input id="descriptiom-input" type="text" name="description" />
+        <label for="image-input">Cover Image:</label><input id="image-input" type="text" name="image" />
+        <label for="year-input">Year:</label><input id="year-input" type="text" name="year" />
+        <label for="rating-input">Rating:</label><input id="rating-input" type="text" name="rating" />
         <button type="submit">Save</button>
     </form>
 </div>

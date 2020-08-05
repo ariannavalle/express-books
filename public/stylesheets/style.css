@@ -20,12 +20,53 @@ body {
     border-radius: 15px;
 }
 
-a {
+.main a {
     color: white;
+    text-decoration: none;
+}
+
+a {
+    color: black;
     text-decoration: none;
 }
 
 input {
     width: 100%;
     margin-bottom: 1rem;
-  }
+}
+
+form {
+    width: 440px;
+}
+
+.buffer {
+    margin: 26px 0;
+}
+
+.main-details {
+    display: flex;
+    justify-content: center;
+}
+
+.book-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+}
+
+.img-details {
+    width: 400px;
+}
+
+#nav {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+#nav img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
