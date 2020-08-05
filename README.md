@@ -1,2 +1,2 @@
 # express-books
-Books catalog CRUD App 
+Simple CRUD app which creates, displays, updates, and deletes books from a database.
