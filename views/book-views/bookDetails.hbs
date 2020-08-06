@@ -4,6 +4,7 @@
     <div class="book-details">
         <h1>{{book.title}}</h1>
         <img class="img-thumbnail img-details" src="{{book.coverImg}}" alt="book cover for {{book.title}}">
+        <a href="/books/update/{{book._id}}" class="ud-links">Edit Book</a>
         <div><h3>Author: {{book.author}}</h3></div>
         <div><h4>{{book.description}}</h4></div>
         <div><h4>Year: {{book.year}}</h4></div>

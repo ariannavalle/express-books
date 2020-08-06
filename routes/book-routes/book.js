@@ -37,8 +37,7 @@ router.post("/update/:id", (req, res, next) => {
     Book.findByIdAndUpdate(req.params.id, req.body, { new: true })
         .then((updatedBook) => {
 			console.log({ updatedBook });
-			
-            res.redirect("back");
+			res.redirect(`/books/${req.params.id}`)
         })
         .catch((err) => console.log(`Error updating book: ${err}`));
 });
