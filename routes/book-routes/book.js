@@ -42,6 +42,12 @@ router.post("/update/:id", (req, res, next) => {
         .catch((err) => console.log(`Error updating book: ${err}`));
 });
 
+router.post("/delete/:id", (req, res, next) => {
+    Book.findByIdAndDelete(req.params.id)
+	.then(() => res.redirect('/books/browse'))
+    .catch(error => console.log(`Error while deleting a book: ${error}`));
+});
+
 router.get('/:id', (req, res, next)=>{
 	Book.findById(req.params.id)
 	.then(bookFromDB => {

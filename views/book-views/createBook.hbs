@@ -6,22 +6,22 @@
     <form action="/books/create" method="POST">
       
         <label for="title-input">Title:</label>
-        <input id="title-input" type="text" name="title" required />
+        <input type="text" name="title" id="title-input" required />
 
         <label for="author-input">Author:</label>
-        <input id="author-input" type="text" name="author" />
+        <input type="text" name="author" id="author-input" />
         
         <label for="description-input">Description:</label>
-        <input id="descriptiom-input" type="text" name="description" />
+        <textarea name="description" id="description-input" cols="52" rows="4"> </textarea>
 
-        <label for="image-input">Cover Image:</label>
-        <input id="image-input" type="text" name="coverImg" />
+        <label for="coverImg-input">Cover Image:</label>
+        <input type="text" name="coverImg" id="coverImg-input" />
 
         <label for="year-input">Year:</label>
-        <input id="year-input" type="text" name="year" />
+        <input type="number" name="year" id="year-input" />
 
-        <label for="rating-input">Rating:</label>
-        <input id="rating-input" type="text" name="rating" />
+        <label for="rate-input">Rate:</label>
+        <input type="number" name="rating" id="rate-input" min="1" max="10" />
 
         <button type="submit">Save</button>
         
