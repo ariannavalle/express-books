@@ -1,7 +1,7 @@
 <div class="main">
     <h2>Edit the book: {{title}}</h2>
 
-    <form action="/books/{{_id}}/edit" method="post">
+    <form action="/books/update/{{_id}}" method="post">
 
         <label for="title-input">Title:</label>
         <input type="text" name="title" id="title-input" value="{{title}}" />

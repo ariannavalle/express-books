@@ -19,15 +19,33 @@ router.post("/create", (req, res, next) => {
 	console.log({ body: req.body });
 	Book.create(req.body)
 		.then((createdBook) => {
-			res.render("book-views/createBook", { book: createdBook });
+			res.render("book-views/bookDetails", { book: createdBook });
 		})
 		.catch((err) => console.log(`Error creating book: ${err}`));
+});
+
+router.get("/update/:id", (req, res, next) => {
+		const { id } = req.params;
+		Book.findById(id)
+		  .then(bookToEdit => {
+			res.render("book-views/editBook", bookToEdit);
+		  })
+		  .catch(error => console.log(`Error while getting a single book for edit: ${error}`));
+	  });
+
+router.post("/update/:id", (req, res, next) => {
+    Book.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        .then((updatedBook) => {
+			console.log({ updatedBook });
+			
+            res.redirect("back");
+        })
+        .catch((err) => console.log(`Error updating book: ${err}`));
 });
 
 router.get('/:id', (req, res, next)=>{
 	Book.findById(req.params.id)
 	.then(bookFromDB => {
-		console.log("test:",bookFromDB)
 		res.render("book-views/bookDetails", {book : bookFromDB})
 	})
 	.catch(err => console.log(`Error retrieving book details: ${err}`))
