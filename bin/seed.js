@@ -33,7 +33,7 @@ const books = [
     author: 'J.K. Rowling ',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
-    coverImg: "https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg",
+    coverImg: "https://pictures.abebooks.com/ARTYBEES/30016795677.jpg",
     year: 1997,
     rating: 9
   },
@@ -50,7 +50,7 @@ const books = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     author: 'Jane Austen',
-    //coverImg: "",
+    coverImg: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4351/9781435159631.jpg",
     rating: 9
   },
   {
@@ -58,7 +58,7 @@ const books = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     author: 'Stephenie Meyer ',
-    //coverImg: "",
+    coverImg: "https://images-na.ssl-images-amazon.com/images/I/41K99+cInvL._SX326_BO1,204,203,200_.jpg",
     rating: 10
   },
   {
@@ -66,7 +66,7 @@ const books = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     author: 'Markus Zusak',
-    //coverImg: "",
+    coverImg: "https://images-na.ssl-images-amazon.com/images/I/9123eop9gIL.jpg",
     rating: 7
   },
   {
@@ -82,7 +82,7 @@ const books = [
     author: 'Laurie Halse Anderson',
     description:
       'High school senior Tyler Miller used to be the kind of guy who faded into the background–average student, average looks, average dysfunctional family. But since he got busted for doing graffiti on the school, and spent the summer doing outdoor work to pay for it, he stands out like you wouldn’t believe. His new physique attracts the attention of queen bee Bethany Milbury, who just so happens to be his father’s boss’s daughter, the sister of his biggest enemy–and Tyler’s secret crush. And that sets off a string of events and changes that have Tyler questioning his place in the school, in his family, and in the world.',
-    coverImg: "https://www.pluggedin.com/wp-content/uploads/2020/01/twisted-cover-image.jpeg",
+    coverImg: "https://images-na.ssl-images-amazon.com/images/I/91xmQ4usVcL.jpg",
     year: 2007,
     rating: 8
   },
@@ -91,7 +91,7 @@ const books = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     author: 'George Orwell',
-    //coverImg: "",
+    coverImg: "https://render.fineartamerica.com/images/rendered/default/print/5.5/8/break/images-medium-5/animal-farm-book-cover-poster-art-1-nishanth-gopinathan.jpg",
     rating: 9
   },
   {
@@ -99,7 +99,7 @@ const books = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     author: 'Margaret Mitchell',
-    // //coverImg: "",
+    coverImg: "https://prodimage.images-bn.com/pimages/9781451635621_p0_v3_s1200x630.jpg",
     rating: 10
   }
 ];
