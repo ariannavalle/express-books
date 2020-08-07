@@ -1,15 +1,6 @@
 const mongoose = require("mongoose");
 const Book = require('../models/book.js');
 
-mongoose
-    .connect("mongodb://localhost/express-books", {
-        useCreateIndex: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false,
-    })
-
-
 const books = [
   {
     title: 'The Hunger Games',
@@ -103,10 +94,27 @@ const books = [
     rating: 10
   }
 ];
- 
-Book.create(books)
+
+mongoose
+    .connect("mongodb://localhost/express-books", {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+})
+.then((x) => {
+  console.log(
+    `Connected to Mongo! Database name: "${x.connections[0].name}"`
+  );
+  Book.collection.drop();
+
+  Book.create(books)
   .then(booksFromDB => {
     console.log(`Created ${booksFromDB.length} books`);
-    mongoose.connection.close();
-  })
+    })
   .catch(err => console.log(`An error occurred while getting books from the DB: ${err}`));
+  setTimeout(() => {
+    mongoose.disconnect();
+  }, 10000);
+})
+.catch((err) => console.error("Error connecting to mongo", err));
