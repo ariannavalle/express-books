@@ -5,7 +5,7 @@ const Book = require("../../models/book");
 router.get("/browse", (req,res,next)=>{
 	Book.find()
 	.then(booksFromDB => {
-		console.log(`List of books: ${booksFromDB}`)
+		// console.log(`List of books: ${booksFromDB}`)
 		res.render("book-views/listBooks", {books: booksFromDB})
 	})
 	.catch(err => console.log(`Error retrieving books: ${err}`))
@@ -16,7 +16,7 @@ router.get("/create", (req, res, next) => {
 });
 
 router.post("/create", (req, res, next) => {
-	console.log({ body: req.body });
+	// console.log({ body: req.body });
 	Book.create(req.body)
 		.then((createdBook) => {
 			res.render("book-views/bookDetails", { book: createdBook });
