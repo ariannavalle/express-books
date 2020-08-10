@@ -1,0 +1,13 @@
+<div id="nav"><a href="/"><img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="" width="40" height="40"></a></div>
+
+<div class="container text-center">
+    <h1>Authors</h1>
+    <div class="row">
+        {{#each authors}}
+        <div class="col-lg-3 col-md-4 col-6 buffer">
+            <div><h5><a href="/authors/{{_id}}">{{firstName}} {{lastName}}</a></h5></div>
+            <a href="/authors/update/{{_id}}" class="ud-links">Edit</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
