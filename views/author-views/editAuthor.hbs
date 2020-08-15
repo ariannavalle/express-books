@@ -2,24 +2,30 @@
             height="40"></a></div>
 
 <div class="main">
-    <h2>Edit the author: {{firstName}}</h2>
+    <h2>Edit the author: {{_doc.firstName}}</h2>
 
-    <form action="/authors/update/{{_id}}" method="POST">
+    <form action="/authors/update/{{_doc._id}}" method="POST">
       
-        <label for="firstName-input">Title:</label>
-        <input type="text" name="firstName" id="firstName-input" value="{{firstName}}" required />
+        <label for="firstName-input">First Name:</label>
+        <input type="text" name="firstName" id="firstName-input" value="{{_doc.firstName}}" />
 
-        <label for="lastName-input">Author:</label>
-        <input type="text" name="lastName" id="lastName-input" value="{{lastName}}"/>
+        <label for="lastName-input">Last Name:</label>
+        <input type="text" name="lastName" id="lastName-input" value="{{_doc.lastName}}"/>
 
         <label for="age-input">Age:</label>
-        <input type="number" name="age" id="age-input" value="{{age}}" />
+        <input type="number" name="age" id="age-input" value="{{_doc.age}}" />
+
+        <div>
+        {{#each books}}
+            <label for="input{{@index}}">{{title}}</label>
+            <input id="input{{@index}}" name="books" type="checkbox" value="{{doc._id}}">
+        {{/each}}
+    </div>
 
         <button type="submit">Save Changes</button>
         
     </form>
-
     <br>
-    <form action="/authors/delete/{{_id}}/" method="POST">
+    <form action="/authors/delete/{{_doc._id}}/" method="POST">
     <button><span class="ud-links">Delete</span></button></form>
 </div>
