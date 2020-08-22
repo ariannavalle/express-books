@@ -16,5 +16,4 @@ const authorSchema = new Schema(
     }
 )
 
-const Author = model("Author", authorSchema)
-module.exports = Author;
+module.exports = model("Author", authorSchema)
