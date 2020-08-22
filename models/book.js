@@ -4,7 +4,7 @@ const {Schema, model} = mongoose;
 const bookSchema = new Schema(
     {
         title: {type: String, required: true},
-        author: { type: [{ type: Schema.Types.ObjectId, ref: 'Author' }] },
+        author: {type: [String]},
         description: {type: String}, 
         coverImg: {type: String, default:"https://memegenerator.net/img/images/16143029.jpg"},
         year: {type: Number},
