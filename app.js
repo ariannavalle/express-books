@@ -67,6 +67,7 @@ app.locals.title = "Express Template";
 app.use("/", require("./routes/index"));
 app.use("/books", require("./routes/book-routes/book"));
 app.use("/authors", require("./routes/author-routes/author"));
+app.use("/auth", require("./routes/auth-routes/auth"));
 
 
 // =================== END ROUTES ===================
